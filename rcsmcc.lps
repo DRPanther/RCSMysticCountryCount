@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="10"/>
+    <BuildModes Active="Windows32"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="rcsmcc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="13" Y="10"/>
+        <UsageCount Value="41"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="/usr/lib/lazarus/1.8.2/ide/lazarus.pp"/>
+        <UnitName Value="Lazarus"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="82"/>
+        <UsageCount Value="10"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="vinfo.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="18"/>
+        <CursorPos Y="36"/>
+        <UsageCount Value="10"/>
+      </Unit2>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="149" TopLine="126"/>
+      </Position1>
+      <Position2>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="135" TopLine="126"/>
+      </Position2>
+      <Position3>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="137" TopLine="126"/>
+      </Position3>
+      <Position4>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="138" TopLine="126"/>
+      </Position4>
+      <Position5>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="144" TopLine="126"/>
+      </Position5>
+      <Position6>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="145" TopLine="126"/>
+      </Position6>
+      <Position7>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="146" TopLine="126"/>
+      </Position7>
+      <Position8>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="147" TopLine="126"/>
+      </Position8>
+      <Position9>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="148" TopLine="126"/>
+      </Position9>
+      <Position10>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="144" TopLine="126"/>
+      </Position10>
+      <Position11>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="145" TopLine="126"/>
+      </Position11>
+      <Position12>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="146" TopLine="126"/>
+      </Position12>
+      <Position13>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="147" TopLine="126"/>
+      </Position13>
+      <Position14>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="148" TopLine="126"/>
+      </Position14>
+      <Position15>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="147" Column="28" TopLine="126"/>
+      </Position15>
+      <Position16>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="135" TopLine="126"/>
+      </Position16>
+      <Position17>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="137" TopLine="126"/>
+      </Position17>
+      <Position18>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="138" TopLine="126"/>
+      </Position18>
+      <Position19>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="140" TopLine="126"/>
+      </Position19>
+      <Position20>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="144" TopLine="126"/>
+      </Position20>
+      <Position21>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="145" TopLine="126"/>
+      </Position21>
+      <Position22>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="146" TopLine="126"/>
+      </Position22>
+      <Position23>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="147" TopLine="126"/>
+      </Position23>
+      <Position24>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="148" TopLine="126"/>
+      </Position24>
+      <Position25>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="149" TopLine="126"/>
+      </Position25>
+      <Position26>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="135" TopLine="126"/>
+      </Position26>
+      <Position27>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="144" TopLine="132"/>
+      </Position27>
+      <Position28>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="104" Column="14" TopLine="77"/>
+      </Position28>
+      <Position29>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="269" Column="43" TopLine="250"/>
+      </Position29>
+      <Position30>
+        <Filename Value="rcsmcc.pas"/>
+        <Caret Line="147" Column="23"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="4">
+      <Item1>
+        <Expression Value="x"/>
+      </Item1>
+      <Item2>
+        <Expression Value="s"/>
+      </Item2>
+      <Item3>
+        <Expression Value="i"/>
+      </Item3>
+      <Item4>
+        <Expression Value="acountry[i].country"/>
+      </Item4>
+    </Watches>
+  </Debugging>
+</CONFIG>
