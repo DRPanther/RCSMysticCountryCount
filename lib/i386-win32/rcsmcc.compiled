@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="C:\lazarus\fpc\3.0.2\bin\i386-win32\fpc.exe" Date="1247517510"/>
-  <Params Value=" -MObjFPC -Scghi -Cr -O1 -l -vewnhibq -FiC:\dan\RCSMysticCountryCount\lib\i386-win32 -FuC:\dan\RCSMysticCountryCount\ -FUC:\dan\RCSMysticCountryCount\lib\i386-win32\ -FEC:\dan\RCSMysticCountryCount\win32-i386\ rcsmcc.pas"/>
-</CONFIG>
