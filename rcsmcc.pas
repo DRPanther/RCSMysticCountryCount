@@ -7,8 +7,7 @@ uses
   {$IFDEF UNIX}{$IFDEF UseCThreads}
   cthreads,
   {$ENDIF}{$ENDIF}
-  SysUtils, strutils, vinfo, versiontypes;
-  { you can add units after this }
+  SysUtils, strutils, vinfo, versiontypes, crt;
 
 const
   prog   = 'RCS Mystic Country Count';
@@ -34,6 +33,9 @@ var
   datefrom   : string;
   booldate   : boolean;
   systemname : string;
+  logdate    : String;
+  YYYY,MM,DD : Word;
+  blockedcon : Integer;
 
 Procedure ProgramHalt;
 begin
@@ -88,8 +90,12 @@ begin
   OSVersion;
   ProgVersion;
   path:=GetCurrentDir;
+  DeCodeDate(Date,YYYY,MM,DD);
+  logdate:=format('%d%d%d',[YYYY,MM,DD]);
+  //writeln(logdate);
+  //readkey;
   try
-  AssignFile(fmislog,'logs'+PathDelim+'mis.log');
+  AssignFile(fmislog,'logs'+PathDelim+'mis.'+logdate+'.log');
   reset(fmislog);
   except
     on E: EInOutError do begin
@@ -102,6 +108,7 @@ begin
   i:=1;
   booldate:=false;
   systemname:='';
+  blockedcon:=0;
 end;
 
 Procedure DupeCheck;
@@ -129,8 +136,15 @@ begin
   if not (booldate) then
   begin
     readln(fmislog,s);
-    Delete(s,1,2);
-    dateto:=Copy(s,1,10);
+    Repeat
+      if (AnsiStartsStr('+',s))then
+      Begin
+        Delete(s,1,2);
+        dateto:=Copy(s,1,10);
+        if (dateto<>'') then booldate:=true
+      end
+      Else readln(fmislog,s);
+    Until (AnsiStartsStr('+',s)) and (booldate);
     reset(fmislog);
     booldate:=true;
   end;
@@ -156,6 +170,7 @@ begin
         acountry[i].attempts:=1;
         inc(i);
       end;
+      if (AnsiContainsStr(s,'-Blocked connection')) then Inc(blockedcon);
     end;
   end;
   //Delete(s,1,2);
@@ -285,6 +300,12 @@ begin
   writeln(mccrpt);
   writeln(mccrpt,PadCenter(' -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ',78));
   writeln(mccrpt);
+  write(mccrpt,'       ');
+  write(mccrpt,PadRight('Blocked Connections',60));
+  writeln(mccrpt,IntToStr(blockedcon));
+  writeln(mccrpt);
+  writeln(mccrpt,PadCenter(' -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ',78));
+  writeln(mccrpt);
   writeln(mccrpt,PadCenter(prog+' v'+ver+' '+sysos,78));
   writeln(mccrpt,PadCenter(author,78));
   CloseFile(mccrpt);
@@ -295,9 +316,9 @@ begin
   ReadMIS;
   x:=1;
   Repeat
-    if FileExists('logs'+PathDelim+'mis.'+IntToStr(x)+'.log') then begin
+    if FileExists('logs'+PathDelim+'mis.'+IntToStr((StrToInt(logdate)+x))+'.log') then begin
       try
-      AssignFile(fmislog,'logs'+PathDelim+'mis.'+IntToStr(x)+'.log');
+      AssignFile(fmislog,'logs'+PathDelim+'mis.'+IntToStr((StrToInt(logdate)+x))+'.log');
       reset(fmislog);
       except
         on E: EInOutError do begin
@@ -308,7 +329,7 @@ begin
       ReadMIS;
       inc(x);
     end;
-  Until FileExists('logs'+PathDelim+'mis.'+IntToStr(x)+'.log')=false;
+  Until FileExists('logs'+PathDelim+'mis.'+IntToStr((StrToInt(logdate)+x))+'.log')=false;
   DupeCheck;
   DataSort;
   ReportOut;
